@@ -4,11 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 <meta name="robots" content="index, follow">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="manifest" href="/manifest.json">
 <title>BLEDOO — On livre. Vous cuisinez</title>
 <meta name="description" content="Cuisinez en toute simplicité avec BLEDOO ! Commandez vos packs d'ingrédients frais et prêts à cuisiner pour tous vos repas préférés.">
 
@@ -39,7 +36,7 @@
 <!-- iOS (Safari / ajout à l'écran d'accueil) -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="BLEDOO">
+<meta name="apple-mobile-web-app-title" content="Bledoo">
 <meta name="format-detection" content="telephone=no">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -69,13 +66,23 @@
 }
 </script>
 
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/install.css">
 </head>
 <body>
 
+<aside class="install-banner" id="installBanner" aria-live="polite" hidden>
+  <div class="install-banner-copy">
+    <strong id="installBannerTitle">Installez Bledoo sur votre téléphone</strong>
+    <span id="installBannerInstructions"></span>
+  </div>
+  <button type="button" id="installBannerButton">Installer</button>
+  <button type="button" class="install-banner-close" id="installBannerClose" aria-label="Fermer" hidden>×</button>
+</aside>
+
 <header>
   <div class="brand">
-    <img src="data:image/webp;base64,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" alt="Logo BLEDOO">
+    <img src="/assets/img/bledoo-logo.webp" alt="Logo BLEDOO">
   </div>
   <div class="header-actions">
     <button class="icon-btn" id="soundToggle" onclick="soundManager.toggleMute()" aria-label="Couper les sons" title="Sons"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h3l4 4V5L7 9H4Z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7"></path><path d="M18.5 6a8.5 8.5 0 0 1 0 12"></path></svg></button>
@@ -191,22 +198,22 @@
   <nav class="footer-dishes" aria-label="Tous nos plats">
     <div class="footer-dishes-title">Nos plats livrés à Douala</div>
     <ul>
-      <li><a href="/ndole.html">Ndolé</a></li>
-      <li><a href="/eru.html">Eru</a></li>
-      <li><a href="/okok.html">Okok</a></li>
-      <li><a href="/pile.html">Pilé</a></li>
-      <li><a href="/kondre.html">Kondré</a></li>
-      <li><a href="/kwem.html">Kwem</a></li>
-      <li><a href="/legumes-sautes.html">Légumes Sautés</a></li>
-      <li><a href="/sanga.html">Sanga</a></li>
-      <li><a href="/poulet-dg.html">Poulet DG</a></li>
-      <li><a href="/poisson-braise.html">Poisson Braisé</a></li>
-      <li><a href="/bouillon-boeuf.html">Bouillon de Bœuf</a></li>
-      <li><a href="/mbongo-tchobi.html">Mbongo Tchobi</a></li>
-      <li><a href="/sauce-jaune.html">Sauce Jaune</a></li>
-      <li><a href="/sauce-gombo.html">Sauce Gombo</a></li>
-      <li><a href="/chou-arachides.html">Sauce de Chou aux Arachides</a></li>
-      <li><a href="/banane-malaxee.html">Banane Malaxée</a></li>
+      <li><a href="/plats/ndole.html">Ndolé</a></li>
+      <li><a href="/plats/eru.html">Eru</a></li>
+      <li><a href="/plats/okok.html">Okok</a></li>
+      <li><a href="/plats/pile.html">Pilé</a></li>
+      <li><a href="/plats/kondre.html">Kondré</a></li>
+      <li><a href="/plats/kwem.html">Kwem</a></li>
+      <li><a href="/plats/legumes-sautes.html">Légumes Sautés</a></li>
+      <li><a href="/plats/sanga.html">Sanga</a></li>
+      <li><a href="/plats/poulet-dg.html">Poulet DG</a></li>
+      <li><a href="/plats/poisson-braise.html">Poisson Braisé</a></li>
+      <li><a href="/plats/bouillon-boeuf.html">Bouillon de Bœuf</a></li>
+      <li><a href="/plats/mbongo-tchobi.html">Mbongo Tchobi</a></li>
+      <li><a href="/plats/sauce-jaune.html">Sauce Jaune</a></li>
+      <li><a href="/plats/sauce-gombo.html">Sauce Gombo</a></li>
+      <li><a href="/plats/chou-arachides.html">Sauce de Chou aux Arachides</a></li>
+      <li><a href="/plats/banane-malaxee.html">Banane Malaxée</a></li>
     </ul>
   </nav>
   <span data-i18n="On livre. Vous cuisinez.">On livre. Vous cuisinez.</span> <a href="https://wa.me/237678699309" target="_blank" style="color:#fff; text-decoration:underline;" data-i18n="Contactez-nous sur WhatsApp">Contactez-nous sur WhatsApp</a>.
@@ -305,6 +312,7 @@
 <script src="assets/js/core.js"></script>
 <script src="assets/js/catalog.js"></script>
 <script src="assets/js/app.js"></script>
+<script src="/assets/js/pwa.js"></script>
 
 </body>
 </html>

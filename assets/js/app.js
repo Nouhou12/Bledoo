@@ -198,7 +198,7 @@
         <div class="dish-info">
           <h3>${t(dish.homeLabel || dish.name)}</h3>
           <span class="dish-cta" data-i18n="Voir les packs →">${t('Voir les packs →')}</span>
-          <a class="dish-page-link" href="${dish.id}.html" onclick="event.stopPropagation();">${t('Fiche du plat')}</a>
+          <a class="dish-page-link" href="/plats/${dish.id}.html" onclick="event.stopPropagation();">${t('Fiche du plat')}</a>
         </div>
       </div>
     `).join('');
