@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex, follow">
+<script>document.documentElement.className+=' js'</script>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<title>Votre commande | BLEDOO</title>
+<meta name="description" content="Votre panier BLEDOO.">
+<meta property="og:title" content="Votre commande | BLEDOO">
+<meta property="og:description" content="Votre panier BLEDOO.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://bledoo.com/panier.html">
+<meta property="og:site_name" content="BLEDOO">
+<meta property="og:image" content="https://bledoo.com/bledoo-og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://bledoo.com/bledoo-og-image.jpg">
+<meta name="theme-color" content="#3c8c3c">
+<link rel="manifest" href="/manifest.json">
+<meta name="apple-mobile-web-app-title" content="Bledoo">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+<script src="/app.js" defer></script>
+</head>
+<body data-page="cart">
+<header class="site-header">
+  <span></span>
+  <a class="hdr-logo" href="/" aria-label="BLEDOO accueil"><img src="/bledoo-logo.webp" alt="Logo BLEDOO" width="46" height="46"></a>
+  <a class="hdr-cart" href="/panier.html" aria-label="Panier"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3h2l2.6 12.6a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L22 7H6"/><circle cx="9" cy="21" r="1.4"/><circle cx="18" cy="21" r="1.4"/></svg><span class="cart-count" id="cartCount" hidden>0</span></a>
+</header>
+
+<main class="wrap cart-page">
+  <h1>Votre commande</h1>
+  <noscript><p class="empty-cart">Pour utiliser le panier, activez JavaScript, ou <a href="https://wa.me/237678699309" style="text-decoration:underline">écrivez-nous directement sur WhatsApp</a>.</p></noscript>
+  <p class="empty-cart" id="cartEmpty" hidden>Votre panier est vide pour le moment.<br><br><a class="btn" href="/plats.html">Voir les plats</a></p>
+  <div id="cartLines"></div>
+  <form id="cartForm" onsubmit="return false" hidden>
+    <div class="totals">
+      <div><span>Total produits</span><span id="tProducts">0 FCFA</span></div>
+      <div><span>Frais de livraison</span><span id="tFee">Entrez votre quartier</span></div>
+      <div class="grand"><span>Total à payer</span><span id="tGrand">0 FCFA</span></div>
+    </div>
+    <div class="field"><label for="custName">Nom complet</label><input type="text" id="custName" placeholder="Ex : Aïcha Mballa" autocomplete="name"></div>
+    <div class="field"><label for="custPhone">Numéro de téléphone</label><input type="tel" id="custPhone" placeholder="Ex : 6XX XX XX XX" autocomplete="tel"></div>
+    <div class="field"><label for="custTime">Moment de livraison souhaité</label>
+      <select id="custTime"><option value="">Choisissez un moment</option><option value="11h - 13h (matin)">Matin — 11h à 13h</option><option value="16h - 18h (soir)">Soir — 16h à 18h</option></select></div>
+    <div class="field"><label for="custQuartier">Quartier de livraison</label><input type="text" id="custQuartier" placeholder="Ex : Akwa, Bonamoussadi..." autocomplete="off"><p class="fee-note" id="feeNote"></p></div>
+    <div class="field"><label for="custAddress">Où exactement</label><textarea id="custAddress" placeholder="Optionnel"></textarea></div>
+    <p class="form-error" id="formError" role="alert" hidden>Merci de renseigner votre nom, votre téléphone et votre quartier avant d'envoyer la commande.</p>
+    <button class="btn wa-btn" id="waSend" type="button">Envoyer sur WhatsApp</button>
+  </form>
+</main>
+<footer>
+  <nav aria-label="Tous nos plats">
+    <div class="ft">Nos plats livrés à Douala</div>
+    <ul>
+      <li><a href="/ndole.html">Ndolé</a></li>
+      <li><a href="/eru.html">Eru</a></li>
+      <li><a href="/okok.html">Okok</a></li>
+      <li><a href="/pile.html">Pilé</a></li>
+      <li><a href="/kondre.html">Kondré</a></li>
+      <li><a href="/kwem.html">Kwem</a></li>
+      <li><a href="/legumes-sautes.html">Légumes Sautés</a></li>
+      <li><a href="/sanga.html">Sanga</a></li>
+      <li><a href="/poulet-dg.html">Poulet DG</a></li>
+      <li><a href="/poisson-braise.html">Poisson Braisé</a></li>
+      <li><a href="/bouillon-boeuf.html">Bouillon de Bœuf</a></li>
+      <li><a href="/mbongo-tchobi.html">Mbongo Tchobi</a></li>
+      <li><a href="/sauce-jaune.html">Sauce Jaune</a></li>
+      <li><a href="/sauce-gombo.html">Sauce Gombo</a></li>
+      <li><a href="/chou-arachides.html">Sauce de Chou aux Arachides</a></li>
+      <li><a href="/banane-malaxee.html">Banane Malaxée</a></li>
+    </ul>
+  </nav>
+  <p class="contact">On livre. Vous cuisinez. <a href="https://wa.me/237678699309" target="_blank" rel="noopener">Contactez-nous sur WhatsApp</a>.</p>
+</footer>
+</body>
+</html>
