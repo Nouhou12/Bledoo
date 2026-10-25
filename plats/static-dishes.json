@@ -1,0 +1,939 @@
+[
+  {
+    "id": "ndole",
+    "name": "Ndolé",
+    "packs": [
+      {
+        "id": "ndole-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Ndolé (10 boules)",
+          "Arachides",
+          "Oignons, ail",
+          "Écrevisses"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "2 Ngata Miondo",
+            "price": 7000,
+            "singlePrice": null
+          },
+          {
+            "name": "Autre complément : Bobolo",
+            "price": 7500,
+            "singlePrice": null
+          }
+        ]
+      },
+      {
+        "id": "ndole-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Ndolé (10 boules)",
+          "Arachides",
+          "Oignons, ail",
+          "Écrevisses",
+          "Viande avec os (1kg)"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "2 Ngata Miondo",
+            "price": 11000,
+            "singlePrice": null
+          },
+          {
+            "name": "Autre complément : Bobolo",
+            "price": 11000,
+            "singlePrice": null
+          },
+          {
+            "name": "Autre complément : Plantains",
+            "price": 12000,
+            "singlePrice": null
+          }
+        ]
+      },
+      {
+        "id": "ndole-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Ndolé (10 boules)",
+          "Arachides",
+          "Oignons, ail",
+          "Écrevisses",
+          "Viande sans os (1kg)"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "2 Ngata Miondo",
+            "price": 12000,
+            "singlePrice": null
+          },
+          {
+            "name": "Autre complément : Bobolo",
+            "price": 12000,
+            "singlePrice": null
+          },
+          {
+            "name": "Autre complément : Plantains",
+            "price": 12000,
+            "singlePrice": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eru",
+    "name": "Eru",
+    "packs": [
+      {
+        "id": "eru-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Water leaf, feuille d'okok",
+          "Crevettes, piment, bounga",
+          "Peau, viandes",
+          "Huile rouge"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Water fufu",
+            "price": 10000,
+            "singlePrice": 7000
+          },
+          {
+            "name": "Garri",
+            "price": 10000,
+            "singlePrice": 7000
+          }
+        ]
+      },
+      {
+        "id": "eru-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Water leaf, feuille d'okok",
+          "Crevettes, piment, bounga",
+          "Peau, viandes",
+          "Huile rouge"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Water fufu",
+            "price": 12000,
+            "singlePrice": 8500
+          },
+          {
+            "name": "Garri",
+            "price": 12000,
+            "singlePrice": 8500
+          }
+        ]
+      },
+      {
+        "id": "eru-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Water leaf, feuille d'okok",
+          "Crevettes, piment, bounga",
+          "Peau, viandes",
+          "Huile rouge"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Water fufu",
+            "price": 13000,
+            "singlePrice": 9500
+          },
+          {
+            "name": "Garri",
+            "price": 13000,
+            "singlePrice": 9500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "okok",
+    "name": "Okok",
+    "packs": [
+      {
+        "id": "okok-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Feuille d'okok pilée",
+          "Crevettes, piment",
+          "Peau, viandes",
+          "Huile, pâte d'arachide"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 11000,
+            "singlePrice": 6500
+          },
+          {
+            "name": "Bobolo",
+            "price": 11000,
+            "singlePrice": 6500
+          }
+        ]
+      },
+      {
+        "id": "okok-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Feuille d'okok pilée",
+          "Crevettes, piment",
+          "Peau, viandes",
+          "Huile, pâte d'arachide"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 13000,
+            "singlePrice": 8000
+          },
+          {
+            "name": "Bobolo",
+            "price": 13000,
+            "singlePrice": 8000
+          }
+        ]
+      },
+      {
+        "id": "okok-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Feuille d'okok pilée",
+          "Crevettes, piment",
+          "Peau, viandes",
+          "Huile, pâte d'arachide"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 14000,
+            "singlePrice": 9000
+          },
+          {
+            "name": "Bobolo",
+            "price": 14000,
+            "singlePrice": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pile",
+    "name": "Pilé",
+    "packs": [
+      {
+        "id": "pile-plantain",
+        "name": "Pilé Plantain",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Plantains",
+          "Macabo, haricots noirs",
+          "Huile de palme rouge, écrevisses séchées",
+          "Oignon, piment frais"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 11500,
+            "singlePrice": 5500
+          }
+        ]
+      },
+      {
+        "id": "pile-pdt",
+        "name": "Pilé de Pomme de Terre",
+        "badge": "Alternative",
+        "ingredientsBase": [
+          "Pommes de terre",
+          "Macabo, haricots noirs",
+          "Huile de palme rouge, écrevisses séchées",
+          "Oignon, piment frais"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 11500,
+            "singlePrice": 5500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kondre",
+    "name": "Kondré",
+    "packs": [
+      {
+        "id": "kondre-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Plantain",
+          "Oignon, ail, gingembre",
+          "Poireau, céleri, piment",
+          "Épices (poivre, girofle, thym...)"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 9000,
+            "singlePrice": 4500
+          }
+        ]
+      },
+      {
+        "id": "kondre-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Plantain",
+          "Oignon, ail, gingembre",
+          "Poireau, céleri, piment",
+          "Épices (poivre, girofle, thym...)",
+          "Viande de bœuf avec os (1kg)"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 13000,
+            "singlePrice": 6500
+          }
+        ]
+      },
+      {
+        "id": "kondre-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Plantain",
+          "Oignon, ail, gingembre",
+          "Poireau, céleri, piment",
+          "Épices (poivre, girofle, thym...)",
+          "Viande de bœuf sans os (1kg)"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 14000,
+            "singlePrice": 7000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "kwem",
+    "name": "Kwem",
+    "packs": [
+      {
+        "id": "kwem-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Feuilles de manioc",
+          "Viande de bœuf (1kg)",
+          "Arachide, huile rouge",
+          "Poivre blanc, crevettes séchées, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 8500,
+            "singlePrice": 7000
+          }
+        ]
+      },
+      {
+        "id": "kwem-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Feuilles de manioc",
+          "Viande de bœuf (1kg)",
+          "Arachide, huile rouge",
+          "Poivre blanc, crevettes séchées, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 11000,
+            "singlePrice": 8000
+          }
+        ]
+      },
+      {
+        "id": "kwem-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Feuilles de manioc",
+          "Viande de bœuf (1kg)",
+          "Arachide, huile rouge",
+          "Poivre blanc, crevettes séchées, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 12000,
+            "singlePrice": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "legumes-sautes",
+    "name": "Légumes Sautés",
+    "packs": [
+      {
+        "id": "legumes-sautes-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Folon, zom ou épinards",
+          "Tomates",
+          "Oignon, ail, poireau",
+          "Écrevisses séchées, poivre blanc"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 8000,
+            "singlePrice": 6000
+          }
+        ]
+      },
+      {
+        "id": "legumes-sautes-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Folon, zom ou épinards",
+          "Tomates",
+          "Oignon, ail, poireau",
+          "Écrevisses séchées, poivre blanc"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 12000,
+            "singlePrice": 7000
+          }
+        ]
+      },
+      {
+        "id": "legumes-sautes-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Folon, zom ou épinards",
+          "Tomates",
+          "Oignon, ail, poireau",
+          "Écrevisses séchées, poivre blanc"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 13000,
+            "singlePrice": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sanga",
+    "name": "Sanga",
+    "packs": [
+      {
+        "id": "sanga-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Maïs frais",
+          "Sucre",
+          "Légumes",
+          "Noix de palme"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 9000,
+            "singlePrice": 6000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "poulet-dg",
+    "name": "Poulet DG",
+    "packs": [
+      {
+        "id": "poulet-dg-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Poulet",
+          "Plantain",
+          "Poivron, carottes, haricots verts",
+          "Oignon, tomate, ail, poireau, céleri, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 17000,
+            "singlePrice": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "poisson-braise",
+    "name": "Poisson Braisé",
+    "packs": [
+      {
+        "id": "poisson-braise-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Poisson frais",
+          "Djansang",
+          "Ail, oignon, piment",
+          "Persil, basilic"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Ngatas Miondo",
+            "price": 9750,
+            "singlePrice": 8500
+          },
+          {
+            "name": "Bobolo",
+            "price": 9750,
+            "singlePrice": 8500
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bouillon-boeuf",
+    "name": "Bouillon de Bœuf",
+    "packs": [
+      {
+        "id": "bouillon-boeuf-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Pattes de bœuf",
+          "Oignon, tomates, céleri",
+          "Romarin, laurier",
+          "Messep, l'ojam"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 12000,
+            "singlePrice": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mbongo-tchobi",
+    "name": "Mbongo Tchobi",
+    "packs": [
+      {
+        "id": "mbongo-tchobi-simple",
+        "name": "Pack Simple (sans protéines)",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Poudre de Mbongo",
+          "Djansang, pèbè, rondelles",
+          "Oignon, tomates non mûres, poireau, ail, piment",
+          "Poudre de Hiomi, quatre côtés, poivre blanc"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 10000,
+            "singlePrice": 6500
+          },
+          {
+            "name": "Plantains",
+            "price": 10000,
+            "singlePrice": 6500
+          }
+        ]
+      },
+      {
+        "id": "mbongo-tchobi-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Poudre de Mbongo",
+          "Djansang, pèbè, rondelles",
+          "Oignon, tomates non mûres, poireau, ail, piment",
+          "Poudre de Hiomi, quatre côtés, poivre blanc",
+          "Porc, poisson-chat machoiron, viande de bœuf"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 13500,
+            "singlePrice": 8000
+          },
+          {
+            "name": "Plantains",
+            "price": 13500,
+            "singlePrice": 8000
+          }
+        ]
+      },
+      {
+        "id": "mbongo-tchobi-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Poudre de Mbongo",
+          "Djansang, pèbè, rondelles",
+          "Oignon, tomates non mûres, poireau, ail, piment",
+          "Poudre de Hiomi, quatre côtés, poivre blanc",
+          "Porc, poisson-chat machoiron, viande de bœuf",
+          "Feuilles de Messep, feuilles de gingembre"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Manioc",
+            "price": 14000,
+            "singlePrice": 9000
+          },
+          {
+            "name": "Plantains",
+            "price": 14000,
+            "singlePrice": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sauce-jaune",
+    "name": "Sauce Jaune",
+    "packs": [
+      {
+        "id": "sauce-jaune-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Peau de bœuf (Kanda), viande de bœuf",
+          "Poisson séché",
+          "Aubergines jaunes, taro",
+          "Kanwa, oignons, piment, condiments, huile de palme"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 8000,
+            "singlePrice": 6500
+          }
+        ]
+      },
+      {
+        "id": "sauce-jaune-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Peau de bœuf (Kanda), viande de bœuf",
+          "Poisson séché",
+          "Aubergines jaunes, taro",
+          "Kanwa, oignons, piment, condiments, huile de palme"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 10000,
+            "singlePrice": 8000
+          }
+        ]
+      },
+      {
+        "id": "sauce-jaune-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Peau de bœuf (Kanda), viande de bœuf",
+          "Poisson séché",
+          "Aubergines jaunes, taro",
+          "Kanwa, oignons, piment, condiments, huile de palme"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 11000,
+            "singlePrice": 9000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sauce-gombo",
+    "name": "Sauce Gombo",
+    "packs": [
+      {
+        "id": "sauce-gombo-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Gombos frais",
+          "Viande de bœuf, peau de bœuf",
+          "Djansang",
+          "Oignons, ail, tomate"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Couscous (gari)",
+            "price": 6500,
+            "singlePrice": 5000
+          },
+          {
+            "name": "Couscous (manioc)",
+            "price": 6500,
+            "singlePrice": 5000
+          }
+        ]
+      },
+      {
+        "id": "sauce-gombo-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Gombos frais",
+          "Viande de bœuf, peau de bœuf",
+          "Djansang",
+          "Oignons, ail, tomate"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Couscous (gari)",
+            "price": 10500,
+            "singlePrice": 6500
+          },
+          {
+            "name": "Couscous (manioc)",
+            "price": 10500,
+            "singlePrice": 6500
+          }
+        ]
+      },
+      {
+        "id": "sauce-gombo-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Gombos frais",
+          "Viande de bœuf, peau de bœuf",
+          "Djansang",
+          "Oignons, ail, tomate"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Couscous (gari)",
+            "price": 11000,
+            "singlePrice": 8000
+          },
+          {
+            "name": "Couscous (manioc)",
+            "price": 11000,
+            "singlePrice": 8000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chou-arachides",
+    "name": "Sauce de Chou aux Arachides",
+    "packs": [
+      {
+        "id": "chou-arachides-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Chou blanc",
+          "Pâte d'arachide",
+          "Viande ou poisson fumé, poisson séché",
+          "Oignon, tomates, ail, piment, poivre"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Plantains",
+            "price": 9500,
+            "singlePrice": 7500
+          }
+        ]
+      },
+      {
+        "id": "chou-arachides-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Chou blanc",
+          "Pâte d'arachide",
+          "Viande ou poisson fumé, poisson séché",
+          "Oignon, tomates, ail, piment, poivre"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Plantains",
+            "price": 13000,
+            "singlePrice": 9500
+          }
+        ]
+      },
+      {
+        "id": "chou-arachides-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Chou blanc",
+          "Pâte d'arachide",
+          "Viande ou poisson fumé, poisson séché",
+          "Oignon, tomates, ail, piment, poivre"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Plantains",
+            "price": 14000,
+            "singlePrice": 10000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "banane-malaxee",
+    "name": "Banane Malaxée",
+    "packs": [
+      {
+        "id": "banane-malaxee-simple",
+        "name": "Pack Simple",
+        "badge": "Populaire",
+        "ingredientsBase": [
+          "Banane plantain",
+          "Viande de bœuf",
+          "Arachide, huile rouge",
+          "Poisson fumé, écrevisses",
+          "Oignon, ail, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 8500,
+            "singlePrice": 6000
+          }
+        ]
+      },
+      {
+        "id": "banane-malaxee-complet",
+        "name": "Pack Complet",
+        "badge": "Best-seller",
+        "ingredientsBase": [
+          "Banane plantain",
+          "Viande de bœuf",
+          "Arachide, huile rouge",
+          "Poisson fumé, écrevisses",
+          "Oignon, ail, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 12000,
+            "singlePrice": 7500
+          }
+        ]
+      },
+      {
+        "id": "banane-malaxee-premium",
+        "name": "Pack Premium",
+        "badge": "Le plus complet",
+        "ingredientsBase": [
+          "Banane plantain",
+          "Viande de bœuf",
+          "Arachide, huile rouge",
+          "Poisson fumé, écrevisses",
+          "Oignon, ail, piment"
+        ],
+        "complementLabel": "Complément",
+        "complements": [
+          {
+            "name": "Portion standard (6-8 personnes)",
+            "price": 13000,
+            "singlePrice": 8000
+          }
+        ]
+      }
+    ]
+  }
+]
