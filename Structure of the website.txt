@@ -1,0 +1,31 @@
+Structure of the website
+
+index.html
+
+<body>
+	<header>
+		<nav>
+	<main>
+		<div class_name ="hero">
+		<div class_name ="dishes">
+			<div dish1>
+				<a link to dish1>
+			<div dish2>
+				<a link to dish1>
+
+	<footer>
+		<div class_name="contact">
+
+dish1.html
+
+<body>
+	<header>
+		<nav>
+	<main>
+		<div format single pack or family>
+		<div Simple pack, complete or premuim>
+	<footer>
+		<div class_name="contact">
+
+in form of a pwa application, ensuring having a sitemap and robot
+
