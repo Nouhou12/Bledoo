@@ -36,6 +36,75 @@
   }
   :root[data-theme="dark"] body{background:var(--paper);}
 
+  .pwa-install-banner{
+    position:fixed;
+    z-index:10000;
+    right:max(1rem, env(safe-area-inset-right));
+    bottom:max(1rem, env(safe-area-inset-bottom));
+    left:max(1rem, env(safe-area-inset-left));
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    max-width:38rem;
+    margin-left:auto;
+    padding:1rem 3.25rem 1rem 1rem;
+    border:1px solid rgba(60,140,60,.2);
+    border-radius:1.25rem;
+    background:var(--surface);
+    color:var(--ink);
+    box-shadow:var(--shadow-lg);
+  }
+  .pwa-install-banner[hidden]{display:none;}
+  .pwa-install-logo{
+    flex:0 0 4rem;
+    width:4rem;
+    height:4rem;
+    border-radius:.9rem;
+    background:#fff;
+    object-fit:contain;
+  }
+  .pwa-install-copy{flex:1;min-width:0;}
+  .pwa-install-copy h2{font-size:1.1rem;}
+  .pwa-install-copy p{margin-top:.2rem;color:var(--muted);font-size:.9rem;line-height:1.35;}
+  .pwa-install-action{
+    flex:0 0 auto;
+    min-height:2.75rem;
+    padding:.65rem 1rem;
+    border:0;
+    border-radius:999px;
+    background:var(--green);
+    color:#fff;
+    font:inherit;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .pwa-install-action:hover{background:var(--green-dark);}
+  .pwa-install-action:focus-visible,.pwa-install-dismiss:focus-visible{
+    outline:3px solid var(--gold);
+    outline-offset:3px;
+  }
+  .pwa-install-action:disabled{opacity:.65;cursor:wait;}
+  .pwa-install-dismiss{
+    position:absolute;
+    top:.4rem;
+    right:.55rem;
+    width:2rem;
+    height:2rem;
+    border:0;
+    border-radius:50%;
+    background:transparent;
+    color:var(--muted);
+    font-size:1.5rem;
+    line-height:1;
+    cursor:pointer;
+  }
+  @media(max-width:520px){
+    .pwa-install-banner{flex-wrap:wrap;gap:.75rem;padding:.9rem 2.75rem .9rem .9rem;}
+    .pwa-install-logo{flex-basis:3.5rem;width:3.5rem;height:3.5rem;}
+    .pwa-install-copy{flex-basis:calc(100% - 4.5rem);}
+    .pwa-install-action{margin-left:4.25rem;}
+  }
+
   *{box-sizing:border-box; margin:0; padding:0;}
 
   body{

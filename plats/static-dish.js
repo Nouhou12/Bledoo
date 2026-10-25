@@ -389,7 +389,7 @@ async function initializeStaticDishPage() {
   addPageOverlays();
   const slug = window.location.pathname.split("/").pop().replace(/\.html$/, "");
   try {
-    const response = await fetch("static-dishes.json");
+    const response = await fetch("/plats/static-dishes.json");
     if (!response.ok) throw new Error(`Chargement des plats impossible (${response.status}).`);
     const dishes = await response.json();
     activeDish = dishes.find((dish) => dish.id === slug);
