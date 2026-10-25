@@ -3,7 +3,7 @@
   'use strict';
   var WA1 = '237678699309', WA2 = '237681862579', FEE = 1000;
   var FREE = ['Akwa', 'Bonabéri', 'Bonamoussadi', 'Deido', 'Bonanjo', 'Bonapriso', 'Makepe', 'Logpom', 'Logbessou', 'Ndokoti', 'Kotto', 'Bali', 'Nkongmondo', 'Bépanda', 'Newbel', 'Mboppi'];
-  var DISH_IDS = ['ndole', 'eru', 'okok', 'pile', 'kondre', 'kwem', 'legumes-sautes', 'sanga', 'poulet-dg', 'poisson-braise', 'bouillon-boeuf', 'mbongo-tchobi', 'sauce-jaune', 'sauce-gombo', 'chou-arachides', 'banane-malaxee'];
+  var DISH_IDS = ['ndole', 'eru', 'okok', 'pile', 'kondre', 'kwem', 'legumes-sautes', 'sanga', 'poulet-dg', 'poisson-braise', 'bouillon-boeuf', 'mbongo-tchobi', 'sauce-jaune', 'sauce-gombo', 'chou-arachides', 'banane-malaxee', 'riz-saute', 'poulet-saute-legumes', 'spaghetti-saute', 'beignets', 'gateau', 'croissants'];
 
   function $(s, r) { return (r || document).querySelector(s); }
   function $$(s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); }
@@ -64,14 +64,37 @@
     var state = f === null ? 'unknown' : (f ? 'free' : 'paid');
     $$('[data-state]').forEach(function (el) { el.hidden = el.getAttribute('data-state') !== state; });
     var s = $('#dishSearch');
-    if (s) s.addEventListener('input', function () {
-      var v = norm(s.value), shown = 0;
-      $$('.dish-card').forEach(function (c) {
-        var ok = norm(c.getAttribute('data-name')).indexOf(v) > -1;
-        c.hidden = !ok; if (ok) shown++;
+    var filters = $$('.dish-filter');
+    var selectedCategory = 'all';
+    function filterDishes() {
+      var query = norm(s ? s.value : ''), shown = 0;
+      $$('.dish-card').forEach(function (card) {
+        var section = card.closest('[data-category-section]');
+        var matchesCategory = selectedCategory === 'all' || section.getAttribute('data-category-section') === selectedCategory;
+        var searchable = norm((card.getAttribute('data-search') || '') + ' ' + (card.getAttribute('data-name') || ''));
+        var matchesSearch = !query || searchable.indexOf(query) > -1;
+        card.hidden = !matchesCategory || !matchesSearch;
+        if (!card.hidden) shown++;
       });
-      $('#noResult').hidden = shown > 0;
+      $$('[data-category-section]').forEach(function (section) {
+        section.hidden = !$$('.dish-card', section).some(function (card) { return !card.hidden; });
+      });
+      var noResult = $('#noResult');
+      if (noResult) noResult.hidden = shown > 0;
+    }
+    if (s) s.addEventListener('input', filterDishes);
+    filters.forEach(function (button) {
+      button.addEventListener('click', function () {
+        selectedCategory = button.getAttribute('data-filter');
+        filters.forEach(function (filter) {
+          var active = filter === button;
+          filter.classList.toggle('active', active);
+          filter.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        filterDishes();
+      });
     });
+    if (filters.length) filterDishes();
   }
 
   // ---------- Page d'un plat ----------
@@ -108,9 +131,32 @@
 
   function initDish() {
     var dishName = $('main').getAttribute('data-dish-name');
+    var packSizeModal = $('#packSizeModal');
+    var packFormatValue = $('#packFormatValue');
+    var changePackFormat = $('#changePackFormat');
+    var confirmPackFormat = $('#confirmPackFormat');
+    function openPackSize() {
+      if (!packSizeModal) return;
+      packSizeModal.classList.add('open');
+      packSizeModal.setAttribute('aria-hidden', 'false');
+      $('input[name="format"]:checked', packSizeModal).focus();
+    }
+    function closePackSize() {
+      if (!packSizeModal) return;
+      packSizeModal.classList.remove('open');
+      packSizeModal.setAttribute('aria-hidden', 'true');
+      if (changePackFormat) changePackFormat.focus();
+    }
     $$('input[name="format"]').forEach(function (r) {
-      r.addEventListener('change', function () { mode = r.value; refresh(); });
+      r.addEventListener('change', function () {
+        mode = r.value;
+        if (packFormatValue) packFormatValue.textContent = modeLabel();
+        refresh();
+      });
     });
+    if (changePackFormat) changePackFormat.addEventListener('click', openPackSize);
+    if (confirmPackFormat) confirmPackFormat.addEventListener('click', closePackSize);
+    if (packSizeModal) openPackSize();
     $$('.pack-card').forEach(function (card) {
       var sel = $('.complement', card);
       if (sel) sel.addEventListener('change', refresh);

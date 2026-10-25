@@ -91,9 +91,9 @@
   </section>
   <section class="dish-sec">
     <h2>Packs disponibles</h2>
-    <div class="format js-only flex" role="radiogroup" aria-label="Format du pack">
-      <label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label>
-      <label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label>
+    <div class="pack-format-summary js-only">
+      <span>Format sélectionné : <strong id="packFormatValue">Pack Familial</strong></span>
+      <button type="button" class="btn btn-ghost" id="changePackFormat">Changer</button>
     </div>
     <div class="pack-grid">
       <article class="card pack-card" data-kind="pack" data-name="Pack Simple">
@@ -201,6 +201,18 @@
     </div>
   </section>
 </main>
+<div class="pack-size-modal js-only" id="packSizeModal" role="dialog" aria-modal="true" aria-labelledby="packSizeTitle" aria-hidden="true">
+  <div class="pack-size-overlay"></div>
+  <div class="pack-size-box">
+    <h2 id="packSizeTitle">Choisissez la taille de votre pack</h2>
+    <p>Les prix s'adaptent au nombre de personnes.</p>
+    <div class="format" role="radiogroup" aria-label="Format du pack">
+      <label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label>
+      <label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label>
+    </div>
+    <button type="button" class="btn" id="confirmPackFormat">Voir les prix</button>
+  </div>
+</div>
 <div class="ing-modal" id="ingModal" role="dialog" aria-modal="true" aria-labelledby="ingModalTitle">
   <div class="ing-modal-overlay"></div>
   <div class="ing-modal-box">
