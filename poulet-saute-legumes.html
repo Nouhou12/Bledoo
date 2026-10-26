@@ -21,7 +21,7 @@
   <nav class="crumb" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › <a href="/plats.html">Plats</a> › <a href="/plats.html#moderne">Plats modernes</a> › Poulet sauté aux légumes</nav>
   <section class="dish-sec"><h2>Ingrédients principaux</h2><ul class="ing-chips"><li>Poulet</li><li>Poivrons</li><li>Carottes</li><li>Oignon, ail, gingembre</li><li>Huile</li><li>Sauce soja</li></ul></section>
   <section class="dish-sec"><h2>Choisissez votre pack</h2>
-    <div class="format js-only flex" role="radiogroup" aria-label="Format du pack"><label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label><label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label></div>
+    <div class="pack-format-summary js-only"><span>Format sélectionné : <strong id="packFormatValue">Pack Familial</strong></span><button type="button" class="btn btn-ghost" id="changePackFormat">Changer</button></div>
     <div class="pack-grid"><article class="card pack-card" data-kind="pack" data-name="Kit d'ingrédients" data-familial="5000" data-single="5000">
       <div class="card-visual" style="background:linear-gradient(135deg,#e2f0e2,#f7efda)" role="img" aria-label="Kit d'ingrédients pour poulet sauté"><span class="badge">Nouveau</span></div>
       <div class="card-body"><h3>Kit d'ingrédients</h3><p class="serves-note"><span class="serves-txt">Pour 6-8 personnes</span></p><ul class="ingredient-list"><li>Poulet</li><li>Légumes pour sauté</li><li>Oignon, ail et gingembre</li><li>Sauce soja et assaisonnement</li></ul><p class="test-price-note">Prix de test : 5 000 FCFA</p>
@@ -32,5 +32,17 @@
   </section>
   <p class="deliv-chip" id="delivChip" hidden></p>
 </main>
+<div class="pack-size-modal js-only" id="packSizeModal" role="dialog" aria-modal="true" aria-labelledby="packSizeTitle" aria-hidden="true">
+  <div class="pack-size-overlay"></div>
+  <div class="pack-size-box">
+    <h2 id="packSizeTitle">Choisissez la taille de votre pack</h2>
+    <p>Les prix s'adaptent au nombre de personnes.</p>
+    <div class="format" role="radiogroup" aria-label="Format du pack">
+      <label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label>
+      <label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label>
+    </div>
+    <button type="button" class="btn" id="confirmPackFormat">Voir les prix</button>
+  </div>
+</div>
 <footer><p><a href="/plats.html">← Retour au catalogue</a> · <a href="https://wa.me/237678699309" target="_blank" rel="noopener">Contact BLEDOO sur WhatsApp</a></p></footer><a class="cart-bar js-only" id="cartBar" href="/panier.html" hidden>Voir mon panier (<span id="cartBarN">0</span>)</a>
 </body></html>
