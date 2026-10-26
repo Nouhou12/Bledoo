@@ -63,6 +63,63 @@
     if (name) name.textContent = q || 'Choisis ton quartier';
     var state = f === null ? 'unknown' : (f ? 'free' : 'paid');
     $$('[data-state]').forEach(function (el) { el.hidden = el.getAttribute('data-state') !== state; });
+
+    var carousel = $('.plate-carousel');
+    if (carousel) {
+      var slides = $$('.carousel-slide', carousel);
+      var dots = $$('.carousel-dot', carousel);
+      var prevBtn = $('.carousel-btn.prev', carousel);
+      var nextBtn = $('.carousel-btn.next', carousel);
+      var currentIndex = 0;
+      var carouselTimer = null;
+
+      function renderCarousel(nextIndex) {
+        currentIndex = (nextIndex + slides.length) % slides.length;
+        slides.forEach(function (slide, index) {
+          slide.classList.toggle('is-active', index === currentIndex);
+        });
+        dots.forEach(function (dot, index) {
+          var active = index === currentIndex;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      }
+
+      function startCarousel() {
+        if (slides.length < 2) return;
+        carouselTimer = window.setInterval(function () {
+          renderCarousel(currentIndex + 1);
+        }, 5000);
+      }
+
+      function stopCarousel() {
+        if (carouselTimer) {
+          window.clearInterval(carouselTimer);
+          carouselTimer = null;
+        }
+      }
+
+      prevBtn && prevBtn.addEventListener('click', function () {
+        stopCarousel();
+        renderCarousel(currentIndex - 1);
+        startCarousel();
+      });
+      nextBtn && nextBtn.addEventListener('click', function () {
+        stopCarousel();
+        renderCarousel(currentIndex + 1);
+        startCarousel();
+      });
+      dots.forEach(function (dot, index) {
+        dot.addEventListener('click', function () {
+          stopCarousel();
+          renderCarousel(index);
+          startCarousel();
+        });
+      });
+      renderCarousel(0);
+      startCarousel();
+    }
+
     var s = $('#dishSearch');
     var filters = $$('.dish-filter');
     var selectedCategory = 'all';
