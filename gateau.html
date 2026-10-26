@@ -12,11 +12,23 @@
 <main class="wrap" data-dish-name="Gâteau">
   <nav class="crumb" aria-label="Fil d'Ariane"><a href="/">Accueil</a> › <a href="/plats.html">Plats</a> › <a href="/plats.html#patisserie">Pâtisseries</a> › Gâteau</nav>
   <section class="dish-sec"><h2>Ingrédients principaux</h2><ul class="ing-chips"><li>Farine</li><li>Œufs</li><li>Sucre</li><li>Beurre</li><li>Lait</li><li>Levure chimique</li><li>Vanille</li></ul></section>
-  <section class="dish-sec"><h2>Choisissez votre pack</h2><div class="format js-only flex" role="radiogroup" aria-label="Format du pack"><label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label><label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label></div>
+  <section class="dish-sec"><h2>Choisissez votre pack</h2><div class="pack-format-summary js-only"><span>Format sélectionné : <strong id="packFormatValue">Pack Familial</strong></span><button type="button" class="btn btn-ghost" id="changePackFormat">Changer</button></div>
     <div class="pack-grid"><article class="card pack-card" data-kind="pack" data-name="Kit d'ingrédients" data-familial="5000" data-single="5000"><div class="card-visual" style="background:linear-gradient(135deg,#fae8d8,#fff7e5)" role="img" aria-label="Kit d'ingrédients pour gâteau"><span class="badge">Pâtisserie</span></div><div class="card-body"><h3>Kit d'ingrédients</h3><p class="serves-note"><span class="serves-txt">Pour 6-8 personnes</span></p><ul class="ingredient-list"><li>Farine, œufs et sucre</li><li>Beurre et lait</li><li>Levure chimique et vanille</li></ul><p class="test-price-note">Prix de test : 5 000 FCFA</p><div class="price-line"><span class="label">Prix du pack</span><span class="value price">5 000 FCFA</span></div>
       <div class="card-actions"><div class="qty-block js-only"><span class="qty-label">Quantité</span><div class="qty"><button type="button" class="qty-minus" aria-label="Moins">−</button><span class="qty-n">1</span><button type="button" class="qty-plus" aria-label="Plus">+</button></div></div><div class="btn-row js-only"><button type="button" class="add-btn secondary add">Ajouter au panier</button><button type="button" class="add-btn order">Commander</button></div></div><a class="wa-direct" href="https://wa.me/237678699309?text=Bonjour%20BLEDOO%2C%20je%20souhaite%20commander%20le%20kit%20d%27ingr%C3%A9dients%20pour%20g%C3%A2teau." target="_blank" rel="noopener">Commander directement sur WhatsApp</a>
     </div></article></div></section>
   <p class="deliv-chip" id="delivChip" hidden></p>
 </main>
+<div class="pack-size-modal js-only" id="packSizeModal" role="dialog" aria-modal="true" aria-labelledby="packSizeTitle" aria-hidden="true">
+  <div class="pack-size-overlay"></div>
+  <div class="pack-size-box">
+    <h2 id="packSizeTitle">Choisissez la taille de votre pack</h2>
+    <p>Les prix s'adaptent au nombre de personnes.</p>
+    <div class="format" role="radiogroup" aria-label="Format du pack">
+      <label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label>
+      <label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label>
+    </div>
+    <button type="button" class="btn" id="confirmPackFormat">Voir les prix</button>
+  </div>
+</div>
 <footer><p><a href="/plats.html">← Retour au catalogue</a> · <a href="https://wa.me/237678699309" target="_blank" rel="noopener">Contact BLEDOO sur WhatsApp</a></p></footer><a class="cart-bar js-only" id="cartBar" href="/panier.html" hidden>Voir mon panier (<span id="cartBarN">0</span>)</a>
 </body></html>

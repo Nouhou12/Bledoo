@@ -91,10 +91,7 @@
   </section>
   <section class="dish-sec">
     <h2>Packs disponibles</h2>
-    <div class="format js-only flex" role="radiogroup" aria-label="Format du pack">
-      <label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 à 8 personnes</small></label>
-      <label><input type="radio" name="format" value="single"> Pack Single <small>1 à 3 personnes</small></label>
-    </div>
+    <div class="pack-format-summary js-only"><span>Format s?lectionn? : <strong id="packFormatValue">Pack Familial</strong></span><button type="button" class="btn btn-ghost" id="changePackFormat">Changer</button></div>
     <div class="pack-grid">
       <article class="card pack-card" data-kind="pack" data-name="Pack Simple">
         <div class="card-visual" style="background-image:url('/images/a5dd474b.webp');background-size:cover;background-position:center;" role="img" aria-label="Sauce Gombo : Pack Simple"><span class="badge">Populaire</span></div>
@@ -237,5 +234,18 @@
   </nav>
   <p class="contact">On livre. Vous cuisinez. <a href="https://wa.me/237678699309" target="_blank" rel="noopener">Contactez-nous sur WhatsApp</a>.</p>
 </footer>
+<div class="pack-size-modal js-only" id="packSizeModal" role="dialog" aria-modal="true" aria-labelledby="packSizeTitle" aria-hidden="true">
+  <div class="pack-size-overlay"></div>
+  <div class="pack-size-box">
+    <h2 id="packSizeTitle">Choisissez la taille de votre pack</h2>
+    <p>Les prix s'adaptent au nombre de personnes.</p>
+    <div class="format" role="radiogroup" aria-label="Format du pack">
+      <label><input type="radio" name="format" value="familial" checked> Pack Familial <small>6 ? 8 personnes</small></label>
+      <label><input type="radio" name="format" value="single"> Pack Single <small>1 ? 3 personnes</small></label>
+    </div>
+    <button type="button" class="btn" id="confirmPackFormat">Voir les prix</button>
+  </div>
+</div>
+
 </body>
 </html>
