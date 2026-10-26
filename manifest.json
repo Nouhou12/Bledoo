@@ -1,25 +1,18 @@
 {
-  "id": "/",
   "name": "Bledoo",
   "short_name": "Bledoo",
-  "description": "Les ingrédients frais de la cuisine camerounaise livrés à Douala.",
-  "start_url": "/",
+  "description": "Ingrédients frais pour vos plats camerounais, livrés à Douala.",
+  "lang": "fr",
+  "start_url": "/?source=pwa",
   "scope": "/",
+  "id": "/",
   "display": "standalone",
-  "background_color": "#FAF6EF",
+  "orientation": "portrait",
   "theme_color": "#3c8c3c",
+  "background_color": "#FAF6EF",
   "icons": [
-    {
-      "src": "/icons/bledo-logo.png",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    },
-    {
-      "src": "/icons/bledo-logo.png",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
-    }
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
