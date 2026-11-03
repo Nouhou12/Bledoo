@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
     <meta name="robots" content="index, follow">
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" type="image/webp" href="/images/bledoo-logo.webp">
-    <link rel="apple-touch-icon" href="/images/bledoo-logo.webp">
+    <link rel="icon" type="image/webp" href="/images/logo/bledoo-logo.webp">
+    <link rel="apple-touch-icon" href="/images/logo/bledoo-logo.webp">
     <title>BLEDOO — On livre. Vous cuisinez</title>
     <meta name="description"
         content="Cuisinez en toute simplicité avec BLEDOO ! Commandez vos packs d'ingrédients frais et prêts à cuisiner pour tous vos repas préférés.">
@@ -79,12 +79,12 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="brand" href="/" aria-label="BLEDOO accueil">
-                <img src="/images/bledoo-logo.webp" alt="Logo BLEDOO" width="42" height="42">
+                <img src="/images/logo/bledoo-logo.webp" alt="Logo BLEDOO" width="60" height="60">
                 <span>BLEDOO</span>
             </a>
 
             <nav class="main-nav" aria-label="Navigation principale">
-                <a href="#packs">Packs</a>
+                <a href="#packs">Nos plats</a>
                 <a href="#livraison">Livraison</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -123,6 +123,96 @@
             </div>
         </div>
     </header>
-</body>
 
+    <main>
+        <section class="dishes-section" id="packs" aria-labelledby="dishes-title">
+            <div class="container">
+                <div class="menu-search">
+                    <label for="menu-search-input">Que voulez vous cuisiner ?</label>
+                    <input id="menu-search-input" type="search" placeholder="Ex. Ndolé, Eru, Okok..." aria-controls="dish-grid">
+                    <p class="search-status" id="menu-search-status" aria-live="polite">4 plats au menu</p>
+                </div>
+
+                <div class="dish-grid" id="dish-grid">
+                    <article class="dish-card">
+                        <img class="dish-image" src="images/dishes/Cameroon-Ndole-dish.jpg" alt="Plat camerounais de Ndolé et Eru">
+                        <div class="dish-details">
+                            <span class="dish-label">Le grand classique</span>
+                            <h3>Ndolé</h3>
+                            <p>Un incontournable camerounais, riche et généreux.</p>
+                            <div class="dish-footer">
+                                <strong>Prix sur demande</strong>
+                                <a class="dish-link" href="https://wa.me/237678699309?text=Bonjour%20BLEDOO%2C%20je%20souhaite%20commander%20un%20pack%20pour%20pr%C3%A9parer%20le%20Ndol%C3%A9." target="_blank" rel="noreferrer">Commander <span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <img class="dish-image" src="images/dishes/Cameroon-Ndole-dish.jpg" alt="Plat camerounais de Ndolé et Eru">
+                        <div class="dish-details">
+                            <span class="dish-label">Saveur du terroir</span>
+                            <h3>Eru</h3>
+                            <p>Un plat traditionnel aux feuilles finement découpées.</p>
+                            <div class="dish-footer">
+                                <strong>Prix sur demande</strong>
+                                <a class="dish-link" href="https://wa.me/237678699309?text=Bonjour%20BLEDOO%2C%20je%20souhaite%20commander%20un%20pack%20pour%20pr%C3%A9parer%20l%27Eru." target="_blank" rel="noreferrer">Commander <span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <img class="dish-image" src="images/dishes/Cameroon-Ndole-dish.jpg" alt="Plat camerounais de Ndolé et Eru">
+                        <div class="dish-details">
+                            <span class="dish-label">Un favori à partager</span>
+                            <h3>Okok</h3>
+                            <p>Retrouvez les ingrédients pour cuisiner ce plat camerounais à la maison.</p>
+                            <div class="dish-footer">
+                                <strong>Prix sur demande</strong>
+                                <a class="dish-link" href="https://wa.me/237678699309?text=Bonjour%20BLEDOO%2C%20je%20souhaite%20commander%20un%20pack%20pour%20pr%C3%A9parer%20l%27Okok." target="_blank" rel="noreferrer">Commander <span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="dish-card">
+                        <img class="dish-image" src="images/dishes/Cameroon-Ndole-dish.jpg" alt="Plat camerounais de Ndolé et Eru">
+                        <div class="dish-details">
+                            <span class="dish-label">Tradition camerounaise</span>
+                            <h3>Pilé</h3>
+                            <p>Préparez ce plat convivial avec les ingrédients prêts à cuisiner.</p>
+                            <div class="dish-footer">
+                                <strong>Prix sur demande</strong>
+                                <a class="dish-link" href="https://wa.me/237678699309?text=Bonjour%20BLEDOO%2C%20je%20souhaite%20commander%20un%20pack%20pour%20pr%C3%A9parer%20le%20Pil%C3%A9." target="_blank" rel="noreferrer">Commander <span aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        const menuSearch = document.querySelector("#menu-search-input");
+        const dishCards = [...document.querySelectorAll(".dish-card")];
+        const searchStatus = document.querySelector("#menu-search-status");
+
+        const normalizeText = (text) => text
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLocaleLowerCase("fr");
+
+        menuSearch.addEventListener("input", () => {
+            const query = normalizeText(menuSearch.value.trim());
+            let visibleCount = 0;
+
+            dishCards.forEach((card) => {
+                const matches = normalizeText(card.textContent).includes(query);
+                card.hidden = !matches;
+                visibleCount += Number(matches);
+            });
+
+            searchStatus.textContent = visibleCount === 0
+                ? "Aucun plat trouvé. Essayez un autre nom."
+                : `${visibleCount} ${visibleCount === 1 ? "plat" : "plats"} au menu`;
+        });
+    </script>
+</body>
 </html>

@@ -46,7 +46,7 @@ img {
     position: relative;
     background:
         radial-gradient(circle at top left, rgba(255, 255, 255, 0.12), transparent 28%),
-        linear-gradient(180deg, #f1f4e8 0%, #edf4e4 20%, #f5f0e7 100%);
+        linear-gradient(180deg, #f1f4e8 0%, #edf4e4 20%, var(--cream) 100%);
     padding: 18px 0 40px;
     overflow: hidden;
 }
@@ -312,6 +312,182 @@ img {
     font-weight: 700;
 }
 
+.dishes-section {
+    padding: 88px 0 96px;
+    background: var(--cream);
+}
+
+.section-heading {
+    max-width: 660px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.section-eyebrow {
+    color: var(--green-700);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    margin: 10px 0 12px;
+    color: var(--green-900);
+    font-family: "Fraunces", serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.08;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.menu-search {
+    max-width: 520px;
+    margin: 0 auto 30px;
+}
+
+.menu-search label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--green-900);
+    font-weight: 800;
+    font-size: x-large;
+}
+
+.menu-search input {
+    width: 100%;
+    min-height: 52px;
+    padding: 0 18px;
+    border: 1px solid rgba(21, 59, 31, 0.2);
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--text);
+    font: inherit;
+}
+
+.menu-search input:focus-visible {
+    outline: 3px solid rgba(60, 140, 60, 0.25);
+    border-color: var(--green-500);
+}
+
+.search-status {
+    min-height: 1.5em;
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.dish-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.dish-card {
+    position: relative;
+    min-width: 0;
+    aspect-ratio: 0.88;
+    overflow: hidden;
+    border: 1px solid rgba(21, 59, 31, 0.1);
+    border-radius: 30px;
+    background: var(--green-300);
+    box-shadow: 0 12px 30px rgba(21, 59, 31, 0.08);
+}
+
+.dish-card[hidden] {
+    display: none;
+}
+
+.dish-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.dish-card:hover .dish-image {
+    transform: scale(1.035);
+}
+
+.dish-details {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 22px 20px 18px;
+    border: 1px solid rgba(21, 59, 31, 0.08);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.664);
+    backdrop-filter: blur(8px);
+}
+
+.dish-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background: rgba(60, 140, 60, 0.1);
+    color: var(--green-700);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.dish-card h3 {
+    margin: 14px 0 8px;
+    color: var(--green-900);
+    font-family: "Fraunces", serif;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.1;
+}
+
+.dish-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.dish-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(21, 59, 31, 0.1);
+}
+
+.dish-footer strong {
+    color: var(--green-900);
+    font-size: 1rem;
+}
+
+.dish-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--green-800);
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.dish-link span {
+    transition: transform 0.2s ease;
+}
+
+.dish-link:hover span,
+.dish-link:focus-visible span {
+    transform: translateX(4px);
+}
+
 @media (max-width: 980px) {
     .header-inner {
         flex-wrap: wrap;
@@ -343,6 +519,7 @@ img {
     .hero-actions {
         justify-content: center;
     }
+
 }
 
 @media (max-width: 620px) {
@@ -390,5 +567,25 @@ img {
     .price-row {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .dishes-section {
+        padding: 64px 0;
+    }
+
+    .dish-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .dish-card {
+        aspect-ratio: 0.9;
+    }
+
+    .dish-details {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        padding: 20px 18px 16px;
     }
 }
